@@ -38,6 +38,7 @@ const createTask = async (task_name) => {
     newTask.id = response.id
   } catch (error) {
     tasks.value.pop()
+    alert('Error creating task. Please try again.')
     console.error('Error creating task:', error)
   }
 }
@@ -50,6 +51,7 @@ const toggleComplete = async (id) => {
       await editTaskFromAPI(id, taskToUpdate)
     } catch (error) {
       taskToUpdate.completed = !taskToUpdate.completed
+      alert('Error editing task. Please try again.')
       console.error('Error toggling complete state:', error)
     }
   }
@@ -72,6 +74,7 @@ const deleteTask = async (deletedTaskId) => {
       await deleteTaskFromAPI(deletedTaskId)
     } catch (error) {
       tasks.value.splice(taskIndex, 0, taskToDelete)
+      alert('Error deleting task. Please try again.')
       console.error('Error deleting task:', error)
     }
   }
