@@ -7,14 +7,13 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: TodoView 
+      component: TodoView
     },
     {
       path: '/about',
       name: 'About',
       component: () => import('../views/HomeView.vue')
-    },
-   
+    }
   ]
 })
 

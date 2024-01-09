@@ -14,7 +14,7 @@ describe('TodoItem', () => {
     const wrapper = mount(TodoItem, {
       props: { task }
     })
-    wrapper.find('[data-testid="toggle-complete-checkbox"]').setValue(true);
+    wrapper.find('[data-testid="toggle-complete-checkbox"]').setValue(true)
 
     await wrapper.find('[data-testid="toggle-complete-checkbox"]').trigger('click')
     expect(wrapper.emitted()).toHaveProperty('toggle-complete')

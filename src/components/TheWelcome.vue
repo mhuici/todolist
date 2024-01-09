@@ -1,11 +1,5 @@
-<template>
-    welcome
-</template>
-  
-<script setup>
-  
-</script>
-  
-<style>
-  
-</style>
+<template>welcome</template>
+
+<script setup></script>
+
+<style></style>
