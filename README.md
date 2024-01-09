@@ -1,6 +1,25 @@
 # Todo List Application
 
-This project is a simple Todo List application built with [insert technology stack here].
+This project is a Todo List application built with Vue 3 and TailwindCSS. It was developed as part of a job application assignment.
+
+## Assignment
+
+The assignment was to create a Todo List application with the following features and requirements:
+
+- Allows users to create, delete, and mark tasks as completed.
+- Uses TailwindCSS for styling.
+- Uses Vue 3 Composition API for reactivity and state management.
+- Developed as a custom tag (for example: `<my-todo-app>`).
+- Includes an API to store and manage the todo list (a mock API was used for this project).
+- The application is responsive and works well on different device sizes.
+
+The success criteria for the assignment were as follows:
+
+- Clean, easy-to-maintain code.
+- Creative and effective problem-solving.
+- Adherence to best practices in Vue 3.
+- Effective use of TailwindCSS and API interactions.
+- A functional application that meets all the specified requirements.
 
 ## Getting Started
 
