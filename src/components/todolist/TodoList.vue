@@ -1,11 +1,11 @@
 <template>
-    <div class="container mx-auto">
+    <div class="container mx-auto"  data-testid="container">
         <h2 class="text-2xl font-bold mb-4 text-center mt-8">My Todo-list</h2>
-        <AddTodo @create-task="createTask" />
-        <ul class="list-disc list-inside">
+        <AddTodo @create-task="createTask" data-testid="add-todo" />
+        <ul class="list-disc list-inside" data-testid="task-list">
             <TodoItem v-for="task in tasks" :key="task.id" :task="task" @delete-task="deleteTask"
                 @toggle-complete="toggleComplete"  @toggle-edit="toggleEdit"
-                @edit-task="editTask"/>
+                @edit-task="editTask" data-testid="task-item" />
         </ul>
     </div>
 </template>
@@ -54,8 +54,7 @@ const toggleComplete = async (id) => {
 const toggleEdit = (id) => {
     const taskToUpdate = tasks.value.find(task => task.id === id);
     if (taskToUpdate) {
-        taskToUpdate.isEditing = !taskToUpdate.isEditing;
-         
+        taskToUpdate.isEditing = !taskToUpdate.isEditing;    
     }
 };
 
@@ -64,9 +63,7 @@ const deleteTask = async (deletedTaskId) => {
 
   if (taskIndex !== -1) {
     const taskToDelete = tasks.value[taskIndex]; 
-
     tasks.value.splice(taskIndex, 1); 
-
     try {
       await deleteTaskFromAPI(deletedTaskId); 
     } catch (error) {
@@ -81,7 +78,6 @@ const editTask = async (id, editedTaskName) => {
 
   if (taskToUpdate) {
     const previousName = taskToUpdate.task_name;
-
     taskToUpdate.task_name = editedTaskName; 
     taskToUpdate.isEditing = false;
     try {
