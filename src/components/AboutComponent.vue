@@ -50,9 +50,9 @@ const points = [
   },
   {
     id: 2,
-    title: 'Error handling in API calls',
+    title: 'Optimistic UI',
     description:
-      'I have implemented error handling in my asynchronous functions. This is crucial for the robustness of my application, as it allows me to handle and notify the user if something goes wrong during API calls.'
+      'It is a design pattern used to improve the perceived performance of web The idea is to simulate the results of certain actions and update the user interface instantly, even before receiving a response from the server.'
   },
   {
     id: 3,
